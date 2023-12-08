@@ -1,25 +1,29 @@
 package org.example;
 import java.util.Date;
-    
+
+
+// Classe criação de uma tarefa no sistema
 
 public class CadastroTarefa {
-    private String tarefa;
-    private String descricao;
-    private Date dataCriacao;
-    private int prioridade;
-    private Date prazo;
-    private String meta;
+    private String tarefa; // Nome da tarefa
+    private String descricao;  // Descrição da tarefa
+    private Date dataCriacao; // Data de criação da tarefa
+    private int prioridade; // Prioridade da tarefa (1 para baixa, 2 para média, 3 para alta)
+    private Date prazo; // Prazo para a conclusão da tarefa
+    private String meta; // Meta pessoal associada à tarefa
 
 
+    // Construtor para inicializar uma nova tarefa com informações básicas
     public CadastroTarefa(String tarefa, String descricao, int prioridade, Date prazo, String meta) {
         this.tarefa = tarefa;
         this.descricao = descricao;
-        this.dataCriacao = new Date();
+        this.dataCriacao = new Date(); // Define a data de criação como a data atual
         this.prioridade = prioridade;
         this.prazo = prazo;
         this.meta = meta;
     }
 
+    // Métodos de acesso para obter e modificar informações da tarefa
     public String getNome() {
         return tarefa;
     }
@@ -68,6 +72,7 @@ public class CadastroTarefa {
         this.meta = meta;
     }
 
+    // Método para exibir as informações da tarefa
     public void exibirInformacoes() {
         System.out.println("Tarefa: " + tarefa);
         System.out.println("Descrição: " + descricao);
